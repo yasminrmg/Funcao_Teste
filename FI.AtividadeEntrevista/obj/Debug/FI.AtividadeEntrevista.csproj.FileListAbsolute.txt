@@ -22,3 +22,9 @@ C:\Users\yasmi\Desktop\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debu
 C:\Users\yasmi\Desktop\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csproj.CoreCompileInputs.cache
 C:\Users\yasmi\Desktop\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.dll
 C:\Users\yasmi\Desktop\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.pdb
+C:\Users\yasmi\Desktop\Funcao_Teste\FI.AtividadeEntrevista\bin\Debug\FI.AtividadeEntrevista.dll
+C:\Users\yasmi\Desktop\Funcao_Teste\FI.AtividadeEntrevista\bin\Debug\FI.AtividadeEntrevista.pdb
+C:\Users\yasmi\Desktop\Funcao_Teste\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csprojAssemblyReference.cache
+C:\Users\yasmi\Desktop\Funcao_Teste\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csproj.CoreCompileInputs.cache
+C:\Users\yasmi\Desktop\Funcao_Teste\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.dll
+C:\Users\yasmi\Desktop\Funcao_Teste\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.pdb

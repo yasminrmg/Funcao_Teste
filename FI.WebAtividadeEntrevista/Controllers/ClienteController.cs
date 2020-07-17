@@ -38,7 +38,11 @@ namespace WebAtividadeEntrevista.Controllers
             }
             else
             {
-                
+                if (bo.VerificarExistencia(model.CPF))
+                {
+                    Response.StatusCode = 400;
+                    return Json("CPF já possui cadastro");
+                }
                 model.Id = bo.Incluir(new Cliente()
                 {                    
                     CEP = model.CEP,
@@ -74,6 +78,11 @@ namespace WebAtividadeEntrevista.Controllers
             }
             else
             {
+                if (bo.VerificarExistencia(model.CPF))
+                {
+                    Response.StatusCode = 400;
+                    return Json("CPF já possui cadastro");
+                }
                 bo.Alterar(new Cliente()
                 {
                     Id = model.Id,
