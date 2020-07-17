@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('#formCadastro').submit(function (e) {
         e.preventDefault();
         if (!validarCPF($(this).find("#CPF").val())) {
-            ModalDialog("Alerta", "O Insira um CPF válido!");
+            ModalDialog("Alerta", "Insira um CPF válido!");
             return false;
         }
         $.ajax({
@@ -44,27 +44,29 @@ $(document).ready(function () {
 
 function validarCPF(cpf) {
     cpf = cpf.replace(/[^\d]+/g, '');
-    cpfCalcalculo = cpf.slice(9);
-    invalido = false;
+    cpfCalcalculo = cpf.slice(0,9);
+    valido = true;
 
     if (cpf == "" || cpf.length != 11)
-        invaliddo = true;
+        valido = false;
 
     //entra no for e enquanto o numero for igual ao primeiro digito ele continua e so sai se houver numeros diferentes
     for (i = 0; i < cpf.length; i++) {
         if (cpf.charAt(0) !== cpf.charAt(i)) {
-            invalido = false;
+            valido = true;
             i = cpf.length;
         } else {
-            invalido = true;
+            valido = false;
         }
     }
+    if (!valido)
+        return valido = false;
 
     for (a = 0; a < 2; a++) {
-        somaTotal = 0
-        multiplicador = cpfCalcalculo.lenght + 1;
+        multiplicador = cpfCalcalculo.length + 1;
 
-        for (i = 0; i < cpfCalcalculo.lenght; i++) {
+        somaTotal = 0
+        for (i = 0; i < cpfCalcalculo.length; i++) {
             somaTotal += parseInt(cpfCalcalculo.charAt(i)) * (multiplicador - i);
         }
 
@@ -74,13 +76,13 @@ function validarCPF(cpf) {
         else
             digito = 11 - digito;
 
-        cpfCalcalculo.concat(digito);
-        if (cpfCalcalculo == cpf)
-            invalido = false;
-        else
-            invalido = true;
+        cpfCalcalculo += digito;
     }
-    return invalido;
+    if (cpfCalcalculo == cpf)
+        valido = true;
+    else
+        valido = false;
+    return valido;
 }
 
 function ModalDialog(titulo, texto) {
